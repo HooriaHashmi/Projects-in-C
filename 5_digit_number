@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    int number, original_number, remainder, sum = 0;
+
+    // Input a five-digit number
+    printf("Enter a five-digit number: ");
+    scanf("%d", &number);
+
+    // Store the original number for later comparison
+    original_number = number;
+
+    // Calculate sum of digits
+    while (number > 0) {
+        remainder = number % 10;
+        sum += remainder;
+        number = number / 10;
+    }
+
+    // Display the sum of digits
+    printf("Sum of digits of %d = %d\n", original_number, sum);
+
+    return 0;
+}
